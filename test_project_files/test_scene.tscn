@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bmsp17b1fykig"]
+
+[ext_resource type="Script" uid="uid://dy6bsab3ieqvb" path="res://test_project_files/test_script.gd" id="1_maj3o"]
+
+[node name="TestScene" type="Control" unique_id=225099697 node_paths=PackedStringArray("window_properties_label", "window_mode_options", "quit_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_maj3o")
+window_properties_label = NodePath("VBoxContainer/WindowProperties")
+window_mode_options = NodePath("VBoxContainer/WindowModes")
+quit_button = NodePath("VBoxContainer/QuitButton")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1924042943]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -63.0
+offset_right = 21.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WindowProperties" type="Label" parent="VBoxContainer" unique_id=1860371006]
+layout_mode = 2
+
+[node name="WindowModes" type="OptionButton" parent="VBoxContainer" unique_id=992826582]
+layout_mode = 2
+
+[node name="Space" type="Control" parent="VBoxContainer" unique_id=2015657765]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1895067336]
+layout_mode = 2
+text = "Quit"

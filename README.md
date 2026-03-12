@@ -11,6 +11,17 @@ Copy `addons/window_restorer` to your project's `addons` folder, then enable
 the plugin in `Project Settings > Plugins` ("Window Configuration Restorer").
 The plugin registers itself automatically as an Autoload on import.
 
+At runtime, the plugin automatically saves the window's configuration when it
+receives a notification of type `NOTIFICATION_WM_CLOSE_REQUEST`.
+This notification is propagated by Godot when the user presses
+the window's native quit button. Make sure your UI quit
+buttons also send this notification when pressed (instead of firing
+`get_tree().quit()` immediately), as indicated in [Godot's documentation]
+(https://docs.godotengine.org/en/stable/tutorials/inputs/handling_quit_requests.html).
+This repository contains a test project with an example of
+a proper implementation (file `test_script.gd`). You can try it out
+by cloning the repository and importing `project.godot` in Godot.
+
 ## Rationale
 Preserving window size and position is a basic functionality of any modern
 desktop application, and games are no exception.
