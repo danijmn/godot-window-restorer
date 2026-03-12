@@ -35,7 +35,8 @@ capabilities.
 - Properly accounts for the possibility of closing the application while the
 window is minimized (saves settings from the last time the window was open).
 - Only runs on desktop platforms, and does not interfere with window embedding
-within the editor (introduced in Godot 4.4).
+within the editor (introduced in Godot 4.4). Additionally, force-quitting
+from the editor does not save the window's configuration.
 
 ## Limitations
 The window can only be restored after the boot splash is displayed.
