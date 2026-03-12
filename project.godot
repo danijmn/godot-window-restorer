@@ -19,7 +19,7 @@ config/icon="res://test_project_files/icon.svg"
 
 [autoload]
 
-WindowRestorerPlugin="*uid://cy5ytqqkmnn3k"
+WindowRestorerPlugin="*res://addons/window_restorer/window_restorer_plugin.gd"
 
 [editor_plugins]
 
