@@ -2,6 +2,7 @@
 extends Node
 
 
+@export var instructions_label: Label
 @export var window_properties_label: Label
 @export var window_mode_options: OptionButton
 @export var quit_button: Button
@@ -56,11 +57,13 @@ func _process(_delta: float) -> void:
 
 func _update_ui() -> void:
 	if Engine.is_embedded_in_editor():
+		instructions_label.visible = false
 		window_properties_label.text = \
 			"EMBEDDED MODE IS ENABLED. DISABLE IT AND RESTART TO TEST THE PLUGIN!"
 		window_mode_options.visible = false
 		quit_button.visible = false
 	else:
+		instructions_label.visible = true
 		window_properties_label.text = \
 			"""WINDOW PROPERTIES
 			- Screen index: %d
